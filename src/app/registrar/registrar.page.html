@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="top">
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Registrar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div class="card">
+
+    <div class="field">
+      <ion-label>Credencial</ion-label>
+      <ion-input [(ngModel)]="credencial"></ion-input>
+    </div>
+
+    <div class="field">
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre"></ion-input>
+    </div>
+
+    <div class="field">
+      <ion-label>Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </div>
+
+    <ion-button expand="block" class="btn-main" (click)="registrar()">
+      Registrar
+    </ion-button>
+
+
+
+  </div>
+</ion-content>

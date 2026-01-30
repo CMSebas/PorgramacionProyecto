@@ -1,0 +1,37 @@
+<ion-header class="top-header">
+  <ion-toolbar class="top-toolbar">
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="volver()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title class="top-title">Eliminar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="main-bg">
+  <div class="card">
+
+    <div class="icon-wrap">
+      <ion-icon name="trash-outline"></ion-icon>
+      <h2>Eliminar Usuario</h2>
+    </div>
+
+    <div class="field">
+      <label>Credencial</label>
+      <ion-input
+        class="input"
+        [(ngModel)]="credencial"
+        placeholder="Ingrese la credencial"
+        inputmode="text"
+      ></ion-input>
+    </div>
+
+    <ion-button expand="block" class="btn-delete" (click)="eliminarUsuario()">
+      Eliminar
+    </ion-button>
+
+    <div class="msg" *ngIf="mensaje">{{ mensaje }}</div>
+  </div>
+</ion-content>

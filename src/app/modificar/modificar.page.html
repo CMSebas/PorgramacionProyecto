@@ -1,0 +1,51 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" (click)="volver()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Modificar Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div class="card">
+
+    <!-- Credencial + lupa -->
+    <div class="field-row">
+      <ion-item class="item" lines="none">
+        <ion-label position="stacked">Credencial</ion-label>
+        <ion-input [(ngModel)]="credencial" placeholder="01"></ion-input>
+      </ion-item>
+
+      <ion-button class="btn-search" fill="clear" (click)="buscar()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="nombre-encontrado" *ngIf="nombreEncontrado">
+  <small>Nombre:</small>
+  <b>{{ nombreEncontrado }}</b>
+</div>
+
+    <!-- Muestra datos cargados -->
+    <ion-item class="item" lines="none">
+      <ion-label position="stacked">Nueva Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="pass1" placeholder="••••••"></ion-input>
+    </ion-item>
+
+    <ion-item class="item" lines="none">
+      <ion-label position="stacked">Confirmar Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="pass2" placeholder="••••••"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" class="btn-primary" (click)="guardarCambios()">
+      Guardar Cambios
+    </ion-button>
+
+    <p class="msg" *ngIf="mensaje">{{ mensaje }}</p>
+
+  </div>
+</ion-content>

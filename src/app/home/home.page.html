@@ -1,20 +1,59 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="top-header">
+  <ion-toolbar class="top-toolbar">
+    
+
+<ion-title class="top-title">
+  Bienvenido <span *ngIf="(nombre$ | async) as n">{{ n }}</span>
+</ion-title>
+
+   <ion-buttons slot="end">
+  <ion-button (click)="logout()">
+    <ion-icon name="power-outline"></ion-icon>
+  </ion-button>
+</ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="main-bg">
+  <div class="card">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+   <div
+  class="item-btn"
+  [ngClass]="{
+    red: (estadoPuerta$ | async) === 'cerrada',
+    green: (estadoPuerta$ | async) === 'abierta'
+  }"
+>
+  <ion-icon
+    [name]="
+      (estadoPuerta$ | async) === 'abierta'
+        ? 'lock-open-outline'
+        : 'lock-closed-outline'
+    "
+  ></ion-icon>
+
+  <span>
+    Puerta {{ estadoPuerta$ | async }}
+  </span>
+</div>
+<div class="item-btn clickable" (click)="irAModificar()" role="button" tabindex="0">
+  <ion-icon name="create-outline"></ion-icon>
+  <span>Modificar Usuario</span>
+</div>
+
+<div class="item-btn clickable"  (click)="irAEliminar()" role="button" tabindex="0">
+  <ion-icon name="trash-outline"></ion-icon>
+  <span>Eliminar Usuario</span>
+</div>
+
+<div class="item-btn clickable"  (click)="irAAccesos()" role="button" tabindex="0">
+  <ion-icon name="people-outline"></ion-icon>
+  <span>Listar Usuarios</span>
+</div>
+
+    <ion-button expand="block" class="btn-register" (click)="irARegistrar()">
+  REGISTRAR
+</ion-button>
+
   </div>
 </ion-content>

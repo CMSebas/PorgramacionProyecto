@@ -1,0 +1,49 @@
+.top {
+  --background: #7f927f;
+  color: #fff;
+}
+
+.bg {
+  --background: #f2f4f2;
+}
+
+.card {
+  width: 92%;
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+ion-label {
+  font-weight: 700;
+  color: #6a6a6a;
+}
+
+ion-input {
+  margin-top: 6px;
+  --padding-start: 10px;
+  background: #eeeeee;
+  border-radius: 10px;
+}
+
+.btn-main {
+  margin-top: 18px;
+  height: 48px;
+  --background: #7f927f;
+  --border-radius: 22px;
+  font-weight: 800;
+}
+
+.msg {
+  margin-top: 12px;
+  text-align: center;
+  color: #b25555;
+  font-weight: 700;
+}

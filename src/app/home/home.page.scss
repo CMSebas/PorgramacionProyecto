@@ -1,27 +1,109 @@
-#container {
-  text-align: center;
+.top-header {
+  ion-toolbar.top-toolbar {
+    --background: #7f927f; // verde gris como la imagen
+    --color: #ffffff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  .top-title {
+    font-weight: 700;
+    text-align: center;
+  }
+
+  ion-button {
+    --color: #ffffff;
+  }
+
+  ion-icon {
+    font-size: 22px;
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.main-bg {
+  --background: linear-gradient(180deg, #f2f4f2 0%, #ffffff 55%, #f7f7f7 100%);
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.card {
+  width: min(420px, 92%);
+  margin: 26px auto;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
-#container a {
-  text-decoration: none;
+.item-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 14px;
+  margin: 12px 0;
+
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  font-weight: 600;
+  color: #4b4b4b;
+
+  ion-icon {
+    font-size: 22px;
+    color: #6d6d6d;
+  }
+
+  &.red {
+    span {
+      color: #b25555;
+      font-weight: 700;
+    }
+    ion-icon {
+      color: #b25555;
+    }
+  }
+}
+
+.btn-register {
+  margin-top: 18px;
+  --background: #7f927f;
+  --background-activated: #6f816f;
+  --border-radius: 12px;
+  height: 46px;
+  font-weight: 700;
+}
+
+.item-btn.clickable {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.05s ease, filter 0.15s ease;
+}
+
+.item-btn.clickable:active {
+  transform: scale(0.99);
+  filter: brightness(0.97);
+}
+
+.item-btn.green {
+  span {
+    color: #4a6b4a;
+    font-weight: 700;
+  }
+
+  ion-icon {
+    color: #4a6b4a;
+  }
+}
+
+.item-btn.red {
+  span {
+    color: #b25555;
+    font-weight: 700;
+  }
+
+  ion-icon {
+    color: #b25555;
+  }
 }

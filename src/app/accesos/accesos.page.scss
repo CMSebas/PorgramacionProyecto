@@ -1,0 +1,175 @@
+.top-header {
+  ion-toolbar.top-toolbar {
+    --background: #7f927f;
+    --color: #ffffff;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  ion-button { --color: #ffffff; }
+  ion-icon { font-size: 22px; }
+}
+
+.main-bg {
+  --background: linear-gradient(180deg, #f2f4f2 0%, #ffffff 55%, #f7f7f7 100%);
+}
+
+.card {
+  width: min(460px, 92%);
+  margin: 18px auto;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* filtros */
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.flabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #3b3b3b;
+  margin: 2px 0 6px 6px;
+}
+
+.date-item {
+  --background: rgba(240, 240, 240, 0.9);
+  --min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  ion-icon { color: #6d6d6d; }
+}
+
+.btn-filter {
+  margin: 10px 0 14px 0;
+  --background: #7f927f;
+  --background-activated: #6f816f;
+  --border-radius: 12px;
+  height: 46px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.msg {
+  margin: 8px 0 10px 0;
+  text-align: center;
+  font-weight: 700;
+  color: #6b6b6b;
+}
+
+/* bloque usuario */
+.user-block {
+  margin: 12px 0 16px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.user-title {
+  background: #7f927f;
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.access-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+/* header verde como referencia */
+.access-table thead th {
+  background: rgba(127, 146, 127, 0.90);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 10px 8px;
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.access-table thead th:last-child {
+  border-right: none;
+}
+
+/* filas gris suaves */
+.access-table tbody td {
+  font-size: 12px;
+  color: #3f3f3f;
+  padding: 10px 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(245, 245, 245, 0.65);
+}
+
+.access-table tbody tr:nth-child(even) td {
+  background: rgba(235, 235, 235, 0.65);
+}
+
+.access-table td.num {
+  text-align: center;
+  font-weight: 700;
+}
+
+.total-row td {
+  background: rgba(220, 220, 220, 0.85) !important;
+  font-weight: 900;
+}
+
+.btn-graph {
+  margin-top: 10px;
+  --background: #7f927f;
+  --background-activated: #6f816f;
+  --border-radius: 12px;
+  height: 46px;
+  font-weight: 800;
+  opacity: 1;
+}
+
+/* responsive */
+@media (max-width: 380px) {
+  .filters { grid-template-columns: 1fr; }
+}
+
+.modal-toolbar {
+  --background: #7f927f;
+  --color: #fff;
+}
+
+.modal-content {
+  --background: rgba(0, 0, 0, 0.25);
+  padding: 14px;
+}
+
+.modal-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  padding: 12px;
+  margin: 12px 10px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.btn-cerrar {
+  margin: 16px 10px 22px 10px;
+  --background: #7f927f;
+  --border-radius: 12px;
+  height: 44px;
+  font-weight: 700;
+}
+

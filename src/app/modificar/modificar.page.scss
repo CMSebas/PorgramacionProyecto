@@ -1,0 +1,71 @@
+.bg {
+  --background: #f3f3f3;
+}
+
+.card {
+  margin: 24px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  backdrop-filter: blur(8px);
+}
+
+.item {
+  --background: rgba(255,255,255,0.45);
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.field-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-end;
+  margin-bottom: 14px;
+}
+
+.field-row .item {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.btn-search {
+  height: 54px;
+  width: 54px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.4);
+}
+
+.btn-primary {
+  margin-top: 8px;
+  --background: #7b8f7c; /* verde suave */
+  --border-radius: 18px;
+  height: 52px;
+  font-weight: 700;
+}
+
+.msg {
+  margin-top: 10px;
+  color: #b00020;
+  text-align: center;
+  font-weight: 600;
+}
+
+.header ion-toolbar {
+  --background: #7b8f7c;
+  --color: #fff;
+}
+
+.nombre-encontrado {
+  margin: 6px 6px 14px 6px;
+  color: #3f3f3f;
+
+  small {
+    opacity: 0.7;
+    margin-right: 6px;
+  }
+
+  b {
+    font-weight: 800;
+  }
+}

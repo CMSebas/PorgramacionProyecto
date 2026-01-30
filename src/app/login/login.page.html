@@ -1,0 +1,50 @@
+<ion-content class="bg">
+  <div class="card">
+
+    <div class="header">
+      <ion-icon name="home-outline" class="home-ico"></ion-icon>
+      <div class="title">Control de Acceso</div>
+    </div>
+
+    <div class="form">
+
+      <div class="field">
+        <ion-icon name="key-outline"></ion-icon>
+        <ion-input
+          placeholder="Credencial"
+          [(ngModel)]="credencial"
+          inputmode="text">
+        </ion-input>
+      </div>
+
+      <div class="field">
+        <ion-icon name="person-outline"></ion-icon>
+        <ion-input
+          placeholder="Nombre"
+          [(ngModel)]="nombre"
+          inputmode="text">
+        </ion-input>
+      </div>
+
+      <div class="field">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-input
+          type="password"
+          placeholder="•••••"
+          [(ngModel)]="password">
+        </ion-input>
+      </div>
+
+      <ion-button expand="block" class="btn-main" (click)="entrar()">
+        Entrar
+      </ion-button>
+
+      <ion-button expand="block" fill="outline" class="btn-outline" (click)="registrarUsuario()">
+        Registrar Usuario
+      </ion-button>
+
+      <div class="msg" *ngIf="mensaje">{{ mensaje }}</div>
+
+    </div>
+  </div>
+</ion-content>

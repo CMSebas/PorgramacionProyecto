@@ -1,0 +1,86 @@
+.bg {
+  --background: linear-gradient(180deg, #eef0ee 0%, #ffffff 55%, #f4f4f4 100%);
+}
+
+.card {
+  width: min(420px, 92%);
+  margin: 24px auto;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.header {
+  background: #7f927f;
+  padding: 18px 14px 16px;
+  text-align: center;
+  color: #fff;
+}
+
+.home-ico {
+  font-size: 34px;
+  display: block;
+  margin: 0 auto 6px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.form {
+  padding: 16px 14px 18px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(220, 220, 220, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.field ion-icon {
+  font-size: 20px;
+  color: #5f5f5f;
+}
+
+.field ion-input {
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --padding-start: 0px;
+  --padding-end: 0px;
+  font-weight: 600;
+  color: #4b4b4b;
+}
+
+.btn-main {
+  margin-top: 14px;
+  --background: #7f927f;
+  --background-activated: #6f816f;
+  --border-radius: 22px;
+  height: 48px;
+  font-weight: 800;
+}
+
+.btn-outline {
+  margin-top: 12px;
+  --border-radius: 22px;
+  height: 48px;
+  font-weight: 800;
+  --color: #6f816f;
+  --border-color: #6f816f;
+}
+
+.msg {
+  margin-top: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #b25555;
+}
